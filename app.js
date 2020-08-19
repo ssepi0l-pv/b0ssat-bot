@@ -112,15 +112,6 @@ function onMessageHandler(channel, tags, message, user, self) {
 	}
 };
 
-
-// setIntervals para enviar comandos cada 10-15 minutos o más.  
-
-/*
-setInterval(function(channel, tags, message) {
-	client.say(channel='b0ssat192', '@b0ssAT192 recuerda: Al apagar stream, prende el servidor. ¡QUE NO SE TE OLVIDE INICIARLO!')
-}, 600000);
-*/
-
 setInterval(function(channel, tags, message) {
 	client.say(channel='b0ssat192', '¡Si disfrutan el contenido, apreciaría un montón que me siguieran!')
 }, 900000);
