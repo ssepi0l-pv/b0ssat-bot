@@ -131,21 +131,4 @@ function onConnectHandler(addr, port) {
 	console.log(`* Conectado a ${addr}:${port}`);
 }
 
-
-
-		//case message.startsWith("!d"):
-		//	var msW = message
-		//	client.log(`${msW}`)
-			//var numeroDado = 0
-			//const dadoSeis = Math.floor(Math.random() * caraSeis) + 1
-			//client.say(channel, `Sacaste un ${dadoSeis}... ¿será el seis de la suerte?`)
-		//	client.log('funca pana')
-
-
-	//if(commandName.startsWith(int, 3)) {
-	//	process.stdout.write(commandName);		
-
-
-
-
 // ` ` for vars
