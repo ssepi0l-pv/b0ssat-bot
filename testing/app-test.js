@@ -18,7 +18,7 @@ fs.readFile('./index.html', function (err, html) {
         response.write(html);  
         response.end();  
     }).listen(PORT);
-	console.log(`Escuchando en el puerto ${PORT}`	
+	console.log(`Escuchando en el puerto ${PORT}`)	
 });
 
 
