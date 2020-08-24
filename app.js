@@ -1,13 +1,8 @@
-var tmi = require('tmi.js');
-
-
-// Configuraciones iniciales. process.env.TTOKEN equivale a la clave OAuth2 que tengo
-// almacenada en una env var, para que en stream no se vea :)
-
+var tmi = require("tmi.js");
 var options = {
 	options: {
 		debug: true
-	}, 
+	},
 	connection: {
 		cluster: "aws",
 		reconnect: true
@@ -19,34 +14,27 @@ var options = {
 	channels: ["b0ssat192"]
 };
 
-var fumarContador = 0
+var fumarContador = 0;
 var client = new tmi.client(options);
 
-
-client.on('message', onMessageHandler);
-client.on('connected', onConnectHandler);
-
-
+client.on("message", onMessageHandler);
+client.on("connected", onConnectHandler);
 client.connect();
 
-
 function onMessageHandler(channel, tags, message, user, self) {
-	if(self)
-		return;
+	if (self) return;
 	const commandName = message.trim();
-	const mod = (tags.username == "b0ssat192" || tags.mod); // Para los comandos meridianamente peligrosos :)
-	
+	const mod = tags.username == "b0ssat192" || tags.mod; // Para los comandos meridianamente peligrosos :)
 
-		// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
-		// Switch para los comandos generales. 									 //
-		// Decidí usar los switches por su sencilleza, porque el código es bastante sencillo de explicar y       //
-		// leer de esta forma, per sobre todo por la estética que llega a tener el código.			 //
-		// A parte, no quiero ser el próximo YandereDev.							 //
-		// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // 
-
+	// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
+	// Switch para los comandos generales.                                                                   //
+	// Decidí usar los switches por su sencilleza, porque el código es bastante sencillo de explicar y       //
+	// leer de esta forma, per sobre todo por la estética que llega a tener el código.                       //
+	// A parte, no quiero ser el próximo YandereDev.                                                         //
+	// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
 
 	if(message.startsWith('!')) {
-		switch(channel, message) { 
+		switch(channel, message) {
 			case "!comandos":
 				client.say(channel, 'Comandos funcionales: !d20, !moderadores, !hola, !felipe, !fueafumar, !vecesfumando, !retrasao, !autores, !discord, !github, !chao, !adios, !specs, !programas, !pedirsong (Trabajo en progreso)')
 				break;
@@ -82,7 +70,7 @@ function onMessageHandler(channel, tags, message, user, self) {
 				} else {
 					client.say(channel, '¡Debes ser moderador para utilizar este comando!')
 				}
-				break;	
+				break;
 			case "!retrasao":
 				client.say(channel, 'Eres un retrasado, b0ssAT192. ¿Lo sabes?')
 				break;
@@ -115,16 +103,12 @@ function onMessageHandler(channel, tags, message, user, self) {
 			client.say(channel, 'Trabajo en progreso :)')
 		}
 	}
-};
+}
 
 setInterval(function(channel, tags, message) {
-	client.say(channel='b0ssat192', '¡Si disfrutan el contenido, apreciaría un montón que me siguieran!')
+	client.say((channel = "b0ssat192"), "¡Si disfrutan el contenido, apreciaría un montón que me siguieran!");
 }, 900000);
-
-
 
 function onConnectHandler(addr, port) {
 	console.log(`* Conectado a ${addr}:${port}`);
 }
-
-// ` ` for vars
