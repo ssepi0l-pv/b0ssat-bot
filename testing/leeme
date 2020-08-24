@@ -1,0 +1,19 @@
+
+###################################################################
+#					      	       		  #
+#		Carpeta testing: ¿Que tenemos aquí?     	  #
+#					               		  #
+###################################################################					     
+
+23/08/2020: Desde hace un par de semanas en stream hemos pensado 
+en añadir la función de poder poner música como en cualquier bot
+que podemos encontrar en varios bots como Moo.bot, Nightbot, etc.
+Lo que deseamos es crear lo mismo que estos bots de codigo cerrado
+y darle un toque de open-source a todo esto. La idea en un principio
+era utilizar la API de Spotify (spotify-web-api, spotify-api, etc). 
+No funcionó. Buscamos varias formas de hacerlo funcionar, pero 
+siempre recibiamos el mismo error. Lo dejamos de lado.
+Sin el conocimiento de mis viewers, comencé a pensar en crear una 
+pagina web que contenga un reproductor web de videos de YouTube, 
+lo que requiere algo de diseño web en CSS. Por eso el index.html,
+el style.css y demases. Aún trabajamos en ello.
