@@ -13,7 +13,7 @@ var options = {
 	},
 	channels: ["b0ssat192"]
 };
-
+var tomoagua = 0;
 var fumarContador = 0;
 var client = new tmi.client(options);
 
@@ -92,6 +92,18 @@ function onMessageHandler(channel, tags, message, user, self) {
 				break;
 			case "!programas":
 				client.say(channel, 'Los programas que uso son: OBS para los streams, GIMP para la edición, Terminator para mi emulador de terminal, VIM como mi editor de texto, y Arch Linux como mi sistema operativo.')
+				break;
+			case "!tomoagua":
+				tomoagua++
+				client.say(channel, `@b0ssAT192 bebió agua. Es la ${tomoagua} vez que toma agua.`)
+				break;
+			case "!clearagua":
+				if (mod) {
+					tomoagua = 0;
+					client.say(channel, "Contador reiniciado <3")
+				} else {
+					client.say(channel, "¡Debes ser moderador para utilizar este comando!")
+				}
 				break;
 			default:
 				client.say(channel, 'Este comando no existe. Para ver una lista de los comandos disponibles, utiliza !comandos')
