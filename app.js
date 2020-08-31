@@ -55,6 +55,7 @@ function onMessageHandler(channel, tags, message, user, self) {
 			case "!vecesfumando":
 				client.say(channel, `b0ssAT192 ha ido a fumar ${fumarContador} veces.`)
 				break;
+			case "!faf":
 			case "!fueafumar":
 				if(mod) {
 					fumarContador++
@@ -63,6 +64,7 @@ function onMessageHandler(channel, tags, message, user, self) {
 					client.say(channel, '¡Debes ser moderador para utilizar este comando!')
 				}
 				break;
+			case "!cs":
 			case "!clearsmoke": // RECORDAR: COMANDO SOLO PARA MODS! REQUERIR TWITCH-API!
 				if(mod) {
 					fumarContador = 0
