@@ -59,7 +59,7 @@ function onMessageHandler(channel, tags, message, user, self) {
 			case "!fueafumar":
 				if(mod) {
 					fumarContador++
-					client.say(channel, `b0ssAT192 fue a fumar. Ha ido a fumar ${fumarContador} veces en este stream.`)
+					client.say(channel, `b0ssAT192 fue a fumarse un porrón. Ha ido a fumar ${fumarContador} veces en este stream.`)
 				} else {
 					client.say(channel, '¡Debes ser moderador para utilizar este comando!')
 				}
