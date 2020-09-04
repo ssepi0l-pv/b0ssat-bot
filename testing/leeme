@@ -17,3 +17,8 @@ Sin el conocimiento de mis viewers, comencé a pensar en crear una
 pagina web que contenga un reproductor web de videos de YouTube, 
 lo que requiere algo de diseño web en CSS. Por eso el index.html,
 el style.css y demases. Aún trabajamos en ello.
+
+04/09/2020: Ahora que sé que Node.js puede ejecutar comandos en la
+bash, voy a utilizar {exec} y child_process para así descargar,
+reproducir en vivo y eliminar archivos mp3, que se descargarán
+desde YouTube a través de ytdl (https://github.com/ytdl-org/youtube-dl).
