@@ -36,7 +36,7 @@ function onMessageHandler(channel, tags, message, user, self) {
 	if(message.startsWith('!')) {
 		switch(channel, message) {
 			case "!comandos":
-				client.say(channel, 'Comandos funcionales: !d20, !moderadores, !hola, !felipe, !fueafumar, !vecesfumando, !retrasao, !autores, !discord, !github, !chao, !adios, !specs, !programas, !pedirsong (Trabajo en progreso)')
+				client.say(channel, 'Comandos funcionales: !d20, !moderadores, !hola, !felipe, !fueafumar, !vecesfumando, !retrasao, !autores, !discord, !github, !chao, !adios, !specs, !programas, !tomoagua, !paypal, !pedirsong (Trabajo en progreso)')
 				break;
 			case "!d20":
 				var caras = 20;
@@ -106,6 +106,9 @@ function onMessageHandler(channel, tags, message, user, self) {
 				} else {
 					client.say(channel, "¡Debes ser moderador para utilizar este comando!")
 				}
+				break;
+			case "!paypal":
+				client.say(channel, 'Si abres esto para donar, ¡muchas gracias! Puedes donar a: paypal.me/b0ssat192')
 				break;
 			default:
 				client.say(channel, 'Este comando no existe. Para ver una lista de los comandos disponibles, utiliza !comandos')
