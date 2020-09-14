@@ -9,7 +9,9 @@ var options = {
 	},
 	identity: {
 		username: "Bot_Supremo",
-		password: process.env.TTOKEN
+		password: process.env.TTOKEN /* Poner token entre comillas, a no ser que usen una env var.
+						Use double-quotes to set the token, unless you're using an env var.	
+					      */
 	},
 	channels: ["b0ssat192"]
 };
@@ -26,13 +28,12 @@ function onMessageHandler(channel, tags, message, user, self) {
 	const commandName = message.trim();
 	const mod = tags.username == "b0ssat192" || tags.mod; // Para los comandos meridianamente peligrosos :)
 
-	// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
-	// Switch para los comandos generales.                                                                   //
-	// Decidí usar los switches por su sencilleza, porque el código es bastante sencillo de explicar y       //
-	// leer de esta forma, per sobre todo por la estética que llega a tener el código.                       //
-	// A parte, no quiero ser el próximo YandereDev.                                                         //
-	// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
-
+	/* Switch para los comandos generales.                                                                   
+	   Decidí usar los switches por su sencilleza, porque el código es bastante sencillo de explicar y       
+	   leer de esta forma, per sobre todo por la estética que llega a tener el código.                       
+	   A parte, no quiero ser el próximo YandereDev.                                                         
+	*/
+	
 	if(message.startsWith('!')) {
 		switch(channel, message) {
 			case "!comandos":
