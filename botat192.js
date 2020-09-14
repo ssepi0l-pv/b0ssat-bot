@@ -76,7 +76,7 @@ function onMessageHandler(channel, tags, message, user, self) {
 			case "!retrasao":
 				client.say(channel, 'Eres un retrasado, b0ssAT192. ¿Lo sabes?')
 				break;
-			case "!autores":
+			case "!autores": /* NO BORRAR ESTAS LINEAS NI SU CONTENIDO! DO NOT ERASE THIS LINES! NE UDALYATE ETI STROKI ILI IKH SODERZHIMOYE!*/
 				client.say(channel, 'Todos juntos creamos este bot. Nuestra comunidad dió vida a todo esto :)')
 				break;
 			case "!chao":
